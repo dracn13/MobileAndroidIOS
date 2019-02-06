@@ -26,12 +26,12 @@ public class Controller : MonoBehaviour
         {
             pointA = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
 
-            Circle.transform.position = pointA * -1;
-            OuterCircle.transform.position = pointA * -1;
+            Circle.transform.position = pointA * 1;
+            OuterCircle.transform.position = pointA * 1;
             Circle.GetComponent<SpriteRenderer>().enabled = true;
             OuterCircle.GetComponent<SpriteRenderer>().enabled = true;
         }
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0))
         {
             TouchStart = true;
             pointB = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
@@ -50,7 +50,7 @@ public class Controller : MonoBehaviour
             Vector2 direction = Vector2.ClampMagnitude(offset, 1.0f);
             moveCharacter(direction * -1);
 
-            Circle.transform.position = new Vector2(pointA.x + direction.x, pointA.y + direction.y) * -1;
+            Circle.transform.position = new Vector2(pointA.x + direction.x, pointA.y + direction.y) * 1;
         }
         else
         {
