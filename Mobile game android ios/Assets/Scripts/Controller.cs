@@ -46,9 +46,10 @@ public class Controller : MonoBehaviour
     {
         if(TouchStart)
         {
+
             Vector2 offset = pointB - pointA;
             Vector2 direction = Vector2.ClampMagnitude(offset, 1.0f);
-            moveCharacter(direction * -1);
+            moveCharacter(direction * 1);
 
             Circle.transform.position = new Vector2(pointA.x + direction.x, pointA.y + direction.y) * 1;
         }
@@ -62,5 +63,7 @@ public class Controller : MonoBehaviour
     void moveCharacter(Vector2 direction)
     {
         player.Translate(direction * Speed * Time.deltaTime);
+        OuterCircle.Translate(direction * Speed * Time.deltaTime);
+        Circle.Translate(direction * Speed * Time.deltaTime);
     }
 }
