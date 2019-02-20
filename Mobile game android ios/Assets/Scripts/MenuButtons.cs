@@ -70,5 +70,12 @@ public class MenuButtons : MonoBehaviour
         PauseMenu.GetComponent<Canvas>().enabled = true;
         DifficultySettings.GetComponent<Canvas>().enabled = false;
     }
+    //exit pause menu button
+    public void ExitMenu()
+    {
+        DifficultySettings.GetComponent<Canvas>().enabled = false;
+        PauseMenu.GetComponent<Canvas>().enabled = false;
+        UI.GetComponent<Canvas>().enabled = true;
+    }
 
 }
