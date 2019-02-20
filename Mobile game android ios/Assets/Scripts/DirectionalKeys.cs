@@ -4,43 +4,54 @@ using UnityEngine;
 
 public class DirectionalKeys : MonoBehaviour
 {
+    public float moveSpeed = 1.0f;
+    private float moveDirX = 0;
+    private float moveDirY= 0;
 
-    public float speed = 10.0f;
-    // Use this for initialization
     void Start()
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        Vector2 velocity = new Vector2(x, y);
-        GetComponent<Rigidbody2D>().velocity = velocity * speed;
-
-
+        MoveX();
+        MoveY();
     }
-
-    public void MoveUp()
+    void MoveX()
     {
-
+        //player movement up down
+        Vector3 velocity = GetComponent<Rigidbody2D>().velocity;
+        velocity.x = moveSpeed * moveDirX;
+        GetComponent<Rigidbody2D>().velocity = velocity;
     }
-
-    public void MoveDown()
+    void MoveY()
     {
-
+        //player movement up down
+        Vector3 velocity = GetComponent<Rigidbody2D>().velocity;
+        velocity.y = moveSpeed * moveDirY;
+        GetComponent<Rigidbody2D>().velocity = velocity;
     }
 
     public void MoveRight()
     {
-
+        moveDirX = 1;
     }
-
     public void MoveLeft()
     {
-
+        moveDirX = -1;
     }
-
+    
+    public void MoveUp()
+    {
+        moveDirY = 1;
+    }
+    public void MoveDown()
+    {
+        moveDirY = -1;
+    }
+    public void Stop()
+    {
+        moveDirX = 0;
+        moveDirY = 0;
+    }
 }
