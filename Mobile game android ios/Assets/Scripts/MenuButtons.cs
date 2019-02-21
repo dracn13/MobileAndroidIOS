@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 // to do:
 //
-// make so you can`t open pause menu in difficulty settings
-//----opening and closing pause menu in difficulty settings sets timescale to 1 allowing movement
+// 
+//
 //
 //
 public class MenuButtons : MonoBehaviour
@@ -44,10 +44,10 @@ public class MenuButtons : MonoBehaviour
     // resume button
     public void Resume()
     {
+        Time.timeScale = 1;
         UI.GetComponent<Canvas>().enabled = true;
         PauseMenu.GetComponent<Canvas>().enabled = false;
         DifficultySettings.GetComponent<Canvas>().enabled = false;
-        Time.timeScale = 1;
     }
     //retry button
     public void Retry()
@@ -73,9 +73,7 @@ public class MenuButtons : MonoBehaviour
     //exit pause menu button
     public void ExitMenu()
     {
-        DifficultySettings.GetComponent<Canvas>().enabled = false;
-        PauseMenu.GetComponent<Canvas>().enabled = false;
-        UI.GetComponent<Canvas>().enabled = true;
+        Resume();
     }
 
 }
