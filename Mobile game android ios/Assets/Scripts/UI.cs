@@ -25,19 +25,17 @@ public class UI : MonoBehaviour
     {
         if (timer > 0.5f && collision.gameObject.tag == "Enemy" || timer > 0.5f && collision.gameObject.tag == "Boss")
         {
-            timer = 0;
             Health--;
             healthText.GetComponent<Text>().text = "Health: " + Health;
             healthBar.GetComponent<Slider>().value = Health;
+            timer = 0;
             if (Health <= 0)
-
             {
                 Time.timeScale = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }
-
 }
 
 
