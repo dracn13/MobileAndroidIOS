@@ -4,13 +4,42 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    public GameObject Door;
-    public bool YouHaveKey;
+ 
+    public int RedKeyCount = 0;
+    public int BlueKeyCount = 0;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+     void OnTriggerEnter2D(Collider2D collision)
     {
-        //Door.SetActive(false);
-        Debug.Log("You have a key");
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Bluekey")
+        {
+            
+            BlueKeyCount++;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Redkey")
+        {
+            
+            RedKeyCount++;
+            Destroy(collision.gameObject);
+        }
+        if (BlueKeyCount >= 1)
+        {
+            if (collision.gameObject.tag == "Bluedoor")
+            {
+                Destroy(collision.gameObject);
+                BlueKeyCount--;
+            }
+        }
+        if (RedKeyCount >= 1)
+        {
+            if (collision.gameObject.tag == "Reddoor")
+            {
+                Destroy(collision.gameObject);
+                RedKeyCount--;
+            }
+        }
     }
+    
+
+
 }
