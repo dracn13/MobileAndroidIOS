@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Bluekey
+  - Bluedoor
+  - Redkey
   layers:
   - Default
   - TransparentFX
