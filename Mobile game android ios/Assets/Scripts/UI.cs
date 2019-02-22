@@ -20,10 +20,10 @@ public class UI : MonoBehaviour
         healthText.GetComponent<Text>().text = "Health: " + Health;
         healthBar.GetComponent<Slider>().value = Health;
     }
-
+    // player health and what happens when you collide with enemies
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (timer > 0.5f && collision.gameObject.tag == "Enemy" || timer > 0.5f && collision.gameObject.tag == "Boss")
+        if (timer > 0.5f && collision.gameObject.tag == "Enemy")
         {
             Health--;
             healthText.GetComponent<Text>().text = "Health: " + Health;
@@ -34,6 +34,11 @@ public class UI : MonoBehaviour
                 Time.timeScale = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
+        }
+        if (timer > 0.5f && collision.gameObject.tag == "Boss")
+        {
+            Time.timeScale = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

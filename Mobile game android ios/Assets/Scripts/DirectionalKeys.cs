@@ -31,7 +31,7 @@ public class DirectionalKeys : MonoBehaviour
         velocity.y = moveSpeed * moveDirY;
         GetComponent<Rigidbody2D>().velocity = velocity;
     }
-
+    // the buttons
     public void MoveRight()
     {
         moveDirX = 1;

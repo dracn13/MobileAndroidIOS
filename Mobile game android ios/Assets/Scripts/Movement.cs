@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+    // basic player movement using wasd nd arrow keys
 	void Update () {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
