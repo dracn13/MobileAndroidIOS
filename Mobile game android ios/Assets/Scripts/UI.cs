@@ -17,6 +17,8 @@ public class UI : MonoBehaviour
     }
     void Start()
     {
+        healthBar.GetComponent<Slider>().maxValue = PlayerPrefs.GetInt("Max HP");
+        Health = PlayerPrefs.GetInt("Max HP");
         healthText.GetComponent<Text>().text = "Health: " + Health;
         healthBar.GetComponent<Slider>().value = Health;
     }

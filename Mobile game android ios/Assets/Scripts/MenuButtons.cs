@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 // to do:
 //
 // 
@@ -10,7 +11,7 @@ using UnityEngine.SceneManagement;
 //
 public class MenuButtons : MonoBehaviour
 {
-
+    public Slider healthbar;
     public GameObject PauseMenu;
     public GameObject UI;
     public GameObject DifficultySettings;
@@ -76,4 +77,24 @@ public class MenuButtons : MonoBehaviour
         Resume();
     }
 
+    //Easy Diffculty
+    public void EasyMode()
+    {
+        PlayerPrefs.SetInt("Max HP", 5);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    //Normal Diffculty
+    public void NormalMode()
+    {
+        PlayerPrefs.SetInt("Max HP", 3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    //Hard Diffculty
+    public void HardMode()
+    {
+        PlayerPrefs.SetInt("Max HP", 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
