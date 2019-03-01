@@ -17,7 +17,7 @@ public class KillerAI : MonoBehaviour
 
     // Where is it going and how fast?
     Vector3 direction;
-    private float walkSpeed = 2f;
+    private float walkSpeed = 4f;
     private int currentTarget;
     private Transform[] waypoints = null;
 
