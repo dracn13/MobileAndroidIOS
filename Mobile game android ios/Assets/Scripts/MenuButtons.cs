@@ -82,6 +82,7 @@ public class MenuButtons : MonoBehaviour
     {
         PlayerPrefs.SetInt("Max HP", 5);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Resume();
     }
 
     //Normal Diffculty
@@ -89,6 +90,7 @@ public class MenuButtons : MonoBehaviour
     {
         PlayerPrefs.SetInt("Max HP", 3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Resume();
     }
 
     //Hard Diffculty
@@ -96,5 +98,7 @@ public class MenuButtons : MonoBehaviour
     {
         PlayerPrefs.SetInt("Max HP", 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Resume();
+
     }
 }
