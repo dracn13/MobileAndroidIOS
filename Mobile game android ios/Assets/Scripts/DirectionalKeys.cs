@@ -7,6 +7,7 @@ public class DirectionalKeys : MonoBehaviour
     public float moveSpeed = 1.0f;
     private float moveDirX = 0;
     private float moveDirY= 0;
+   
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class DirectionalKeys : MonoBehaviour
     {
         MoveX();
         MoveY();
+     
     }
     void MoveX()
     {
