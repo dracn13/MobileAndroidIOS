@@ -31,11 +31,24 @@ public class KillerAI : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
 
         // Add all our waypoints into the waypoints array
-        Transform point1 = GameObject.Find("P1").transform;
-        Transform point2 = GameObject.Find("P2").transform;
-        Transform point3 = GameObject.Find("P3").transform;
-        Transform point4 = GameObject.Find("P4").transform;
-        Transform point5 = GameObject.Find("P5").transform;
+        //void OnTrigger1Enter2D(Collider2D collision)
+        //{
+            Transform point1 = GameObject.Find("P1").transform;
+            Transform point2 = GameObject.Find("P2").transform;
+            Transform point3 = GameObject.Find("P3").transform;
+            Transform point4 = GameObject.Find("P4").transform;
+            Transform point5 = GameObject.Find("P5").transform;
+        //}
+        /*void OnTrigger2Enter2D(Collider2D collision)
+        {
+            Transform point1 = GameObject.Find("P6").transform;
+            Transform point2 = GameObject.Find("P7").transform;
+            Transform point3 = GameObject.Find("P8").transform;
+            Transform point4 = GameObject.Find("P9").transform;
+            Transform point5 = GameObject.Find("P10").transform;
+        }*/
+
+
         waypoints = new Transform[5] 
         {
             point1,
@@ -45,6 +58,22 @@ public class KillerAI : MonoBehaviour
             point5
         };
 
+    }
+    public void Patrol2()
+    {
+        Transform point1 = GameObject.Find("P6").transform;
+        Transform point2 = GameObject.Find("P7").transform;
+        Transform point3 = GameObject.Find("P8").transform;
+        Transform point4 = GameObject.Find("P9").transform;
+        Transform point5 = GameObject.Find("P10").transform;
+        waypoints = new Transform[5]
+        {
+            point1,
+            point2,
+            point3,
+            point4,
+            point5
+        };
     }
 
     private void Update()
