@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class NewPatrol : MonoBehaviour
 {
-    public GameObject Trigger1;
+    public KillerAI other;
+    public GameObject Trigger2;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        gameObject.GetComponent<KillerAI>().Patrol2
+        other.Patrol2();
     }
 
 }
