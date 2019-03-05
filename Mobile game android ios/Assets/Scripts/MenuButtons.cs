@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 // to do:
-//
+// WinScreen Menu Buttons
 // 
 //
 //
@@ -100,5 +100,17 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Resume();
 
+    }
+
+    //Winscreen play again
+    public void Playagain()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+   //WinScreen Not to Play again
+   public void Backtomenu()
+    {
+        SceneManager.LoadScene("TitleScreen");
     }
 }
