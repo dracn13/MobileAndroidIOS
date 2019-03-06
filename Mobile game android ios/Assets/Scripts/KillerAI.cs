@@ -76,6 +76,40 @@ public class KillerAI : MonoBehaviour
         };
     }
 
+    public void Patrol3()
+    {
+        Transform point1 = GameObject.Find("P11").transform;
+        Transform point2 = GameObject.Find("P12").transform;
+        Transform point3 = GameObject.Find("P13").transform;
+        Transform point4 = GameObject.Find("P14").transform;
+        Transform point5 = GameObject.Find("P15").transform;
+        waypoints = new Transform[5]
+        {
+            point1,
+            point2,
+            point3,
+            point4,
+            point5
+        };
+    }
+
+    public void Patrol4()
+    {
+        Transform point1 = GameObject.Find("P16").transform;
+        Transform point2 = GameObject.Find("P17").transform;
+        Transform point3 = GameObject.Find("P18").transform;
+        Transform point4 = GameObject.Find("P19").transform;
+        Transform point5 = GameObject.Find("P20").transform;
+        waypoints = new Transform[5]
+        {
+            point1,
+            point2,
+            point3,
+            point4,
+            point5
+        };
+    }
+
     private void Update()
     {
         // If chasing get the position of the player and point towards it
