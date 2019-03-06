@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     public Vector3 paceDirection = new Vector3(0, 0, 0);
     public float paceDistance = 3.0f;
     public float paceSpeed = 2.0f;
+    
 
     // Use this for initialization
     void Start()
@@ -24,6 +25,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         Vector3 playerPosition = player.transform.position;
         //vector form enemy position to the players position
         Vector3 chaseDirection = playerPosition - transform.position;

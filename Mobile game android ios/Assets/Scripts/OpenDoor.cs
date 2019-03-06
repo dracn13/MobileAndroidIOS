@@ -45,7 +45,27 @@ public class OpenDoor : MonoBehaviour
             }
         }
     }
-    
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (BlueKeyCount >= 1)
+        {
+            if (collision.gameObject.tag == "Bluedoor")
+            {
+                BlueKey.GetComponent<RawImage>().enabled = false;
+                Destroy(collision.gameObject);
+                BlueKeyCount--;
+            }
+        }
+        if (RedKeyCount >= 1)
+        {
+            if (collision.gameObject.tag == "Reddoor")
+            {
+                RedKey.GetComponent<RawImage>().enabled = false;
+                Destroy(collision.gameObject);
+                RedKeyCount--;
+            }
+        }
+    }
 
 }
