@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAnimation : MonoBehaviour
+public class PlayerACMobile : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,38 +15,38 @@ public class EnemyAnimation : MonoBehaviour
     {
         float x = GetComponent<Rigidbody2D>().velocity.x;
         float y = GetComponent<Rigidbody2D>().velocity.y;
-        
-        if(x < 0)
+        bool Idle = true;
+        if (x < 0)
         {
             GetComponent<Animator>().SetFloat("x", x);
             GetComponent<Animator>().SetFloat("y", 0);
-            GetComponent<Animator>().SetBool("idle", false);
+            GetComponent<Animator>().SetBool("Idle", false);
         }
 
         if (x > 0)
         {
             GetComponent<Animator>().SetFloat("x", x);
             GetComponent<Animator>().SetFloat("y", 0);
-            GetComponent<Animator>().SetBool("idle", false);
+            GetComponent<Animator>().SetBool("Idle", false);
         }
 
         if (y > 0)
         {
             GetComponent<Animator>().SetFloat("y", y);
             GetComponent<Animator>().SetFloat("x", 0);
-            GetComponent<Animator>().SetBool("idle", false);
+            GetComponent<Animator>().SetBool("Idle", false);
         }
 
         if (y < 0)
         {
             GetComponent<Animator>().SetFloat("y", y);
             GetComponent<Animator>().SetFloat("x", 0);
-            GetComponent<Animator>().SetBool("idle", false);
+            GetComponent<Animator>().SetBool("Idle", false);
         }
 
         if (x == 0 && y == 0)
         {
-            GetComponent<Animator>().SetBool("idle", true);
+            GetComponent<Animator>().SetBool("Idle", true);
             GetComponent<Animator>().SetFloat("y", 0);
             GetComponent<Animator>().SetFloat("x", 0);
         }
