@@ -33,13 +33,13 @@ public class UI : MonoBehaviour
             timer = 0;
             if (Health <= 0)
             {
-                Time.timeScale = 0;
+                Time.timeScale = 1;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
         if (timer > 0.5f && collision.gameObject.tag == "Boss")
         {
-            Time.timeScale = 0;
+            Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

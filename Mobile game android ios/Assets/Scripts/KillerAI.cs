@@ -116,7 +116,7 @@ public class KillerAI : MonoBehaviour
         if (chasing)
         {
             direction = playerTransform.position - transform.position;
-            rotateKiller();
+            RotateKiller();
         }
 
         // Unless the zombie is waiting then move
@@ -152,14 +152,14 @@ public class KillerAI : MonoBehaviour
 
         // Load the direction of the next waypoint
         direction = waypoints[currentTarget].position - transform.position;
-        rotateKiller();
+        RotateKiller();
     }
 
     public void Chase()
     {
         // Load the direction of the player
         direction = playerTransform.position - transform.position;
-        rotateKiller();
+        RotateKiller();
     }
 
     public void StopChasing()
@@ -167,7 +167,7 @@ public class KillerAI : MonoBehaviour
         chasing = false;
     }
 
-    private void rotateKiller()
+    private void RotateKiller()
     {
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));

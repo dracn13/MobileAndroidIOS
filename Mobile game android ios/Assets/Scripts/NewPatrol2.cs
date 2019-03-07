@@ -10,6 +10,7 @@ public class NewPatrol2 : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         other.Patrol3();
+        other.SetNextPoint();
     }
 
 }
