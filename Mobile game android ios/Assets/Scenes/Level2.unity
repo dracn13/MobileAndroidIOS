@@ -10004,7 +10004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 156.87, y: -324.03}
+  m_AnchoredPosition: {x: -315.99, y: 61}
   m_SizeDelta: {x: 153.75, y: 37.934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64770284
@@ -11364,7 +11364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 253.74, y: -324.03}
+  m_AnchoredPosition: {x: -219.12, y: 59.967}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416162757
@@ -12622,6 +12622,7 @@ GameObject:
   - component: {fileID: 729741895}
   - component: {fileID: 729741894}
   - component: {fileID: 729741893}
+  - component: {fileID: 729741899}
   m_Layer: 0
   m_Name: Chomp
   m_TagString: Enemy
@@ -12676,7 +12677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6248d23738a3faa4786154cd6627f618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 978141741}
   chaseSpeed: 3
   chaseTriggerDistance: 5
   paceDirection: {x: 2, y: 0, z: 0}
@@ -12763,6 +12764,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &729741899
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729741892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0039530993, y: -0.06413317}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5625, y: 1.5625}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.62946105, y: 0.6910944}
+  m_EdgeRadius: 0
 --- !u!1 &744355333
 GameObject:
   m_ObjectHideFlags: 0
@@ -15761,7 +15788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 358.56, y: -324.03}
+  m_AnchoredPosition: {x: -118, y: 61.001}
   m_SizeDelta: {x: 132.82, y: 37.935}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567060851
@@ -82878,7 +82905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 444.97, y: -325.06}
+  m_AnchoredPosition: {x: -31.590027, y: 61.001}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731075468
