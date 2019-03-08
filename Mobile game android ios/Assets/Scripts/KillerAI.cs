@@ -59,6 +59,22 @@ public class KillerAI : MonoBehaviour
         };
 
     }
+    public void Patrol1()
+    {
+        Transform point1 = GameObject.Find("P1").transform;
+        Transform point2 = GameObject.Find("P2").transform;
+        Transform point3 = GameObject.Find("P3").transform;
+        Transform point4 = GameObject.Find("P4").transform;
+        Transform point5 = GameObject.Find("P5").transform;
+        waypoints = new Transform[5]
+        {
+            point1,
+            point2,
+            point3,
+            point4,
+            point5
+        };
+    }
     public void Patrol2()
     {
         Transform point1 = GameObject.Find("P6").transform;
@@ -109,6 +125,7 @@ public class KillerAI : MonoBehaviour
             point5
         };
     }
+
 
     private void Update()
     {
